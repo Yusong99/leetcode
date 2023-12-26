@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * @param {number} n
+     * @return {Function} counter
+     */
+    var createCounter = function(n) {
+        return function() {
+            return n++;//闭包，内部的函数调用外部函数的变量，该变量不会被立即回收，会一直在内存中
+        };
+    };
+
+    const counter = createCounter(10)
+    counter()
+    counter()
+    counter()
+    /**
+     * const counter = createCounter(10)
+     * counter() // 10
+     * counter() // 11
+     * counter() // 12
+     */
+</script>
+</body>
+</html>
