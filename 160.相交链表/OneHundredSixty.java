@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class OneHundredSixty {
     public static void main(String[] args) {
@@ -6,16 +9,18 @@ public class OneHundredSixty {
     }
 
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        ArrayList<Integer> listA = new ArrayList<>();
-        while (headA != null) {
-            listA.add(headA.val);
-            headA = headA.next;
+        Set<ListNode> visited = new HashSet<ListNode>();
+        ListNode temp = headA;
+        while (temp != null) {
+            visited.add(temp);
+            temp = temp.next;
         }
-        while (headB != null) {
-            for (int i = 0; i < listA.size(); i++) {
-                if (headB.val == listA.get(i)) {return headB;}
+        temp = headB;
+        while (temp != null) {
+            if (visited.contains(temp)) {
+                return temp;
             }
-            headB = headB.next;
+            temp = temp.next;
         }
         return null;
     }
