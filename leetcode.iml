@@ -17,6 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/9.回文数" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/160.相交链表" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/49.字母异位词分组" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/326.3的幂" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
